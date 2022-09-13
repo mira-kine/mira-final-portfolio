@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import '@fontsource/kaushan-script';
-import '@fontsource/sirin-stencil';
+import '@fontsource/sulphur-point';
+import '@fontsource/montserrat';
 
 const GlobalStyles = createGlobalStyle`
 *,*::before,*::after{
@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    font-family: "sirin Stencil";
+    font-family: "Sulphur Point";
     overflow-x: hidden; 
 }
 

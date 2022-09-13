@@ -45,12 +45,12 @@ const Title = styled(motion.div)`
   }
 
   h1 {
-    font-family: 'Kaushan Script';
+    font-family: 'Montserrat';
     font-size: ${(props) => props.theme.fontBig};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
   }
   h2 {
-    font-family: 'Sirin Stencil';
+    font-family: 'Sulphur Point';
     font-size: ${(props) => props.theme.fontlg};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
     font-weight: 300;
