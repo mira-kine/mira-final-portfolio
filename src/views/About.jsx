@@ -6,6 +6,7 @@ const Section = styled.section`
   min-height: 100vh;
   width: 80vw;
   display: flex;
+  overflow: hidden;
 
   margin: 0 auto;
 `;
