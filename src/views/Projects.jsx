@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   min-height: 100vh;
+  height: auto;
   width: 100vw;
   overflow: hidden;
   margin: 0 auto;
@@ -14,15 +15,27 @@ const Section = styled.section`
   position: relative;
 `;
 
-const Title = styled.h1`
+const Title = styled.div`
   font-size: ${(props) => props.theme.fontBig};
   font-family: 'Montserrat';
   font-weight: 300;
+  width: 35%;
+  font-size: 5rem;
 
+  color: ${(props) => props.theme.text};
   position: absolute;
   top: 1rem;
-  left: 5%;
+  z-index: 10;
+`;
+
+const Left = styled.div`
+  width: 35%;
+  background-color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
+
+  min-height: 100vh;
   z-index: 5;
+  position: absolute;
 `;
 
 export default function Projects() {
@@ -35,6 +48,7 @@ export default function Projects() {
       >
         Projects
       </Title>
+      <Left>text</Left>
     </Section>
   );
 }
