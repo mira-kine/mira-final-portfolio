@@ -65,15 +65,22 @@ const Right = styled.div`
 `;
 
 const Item = styled(motion.div)`
-  display: inline-block;
   width: 20rem;
   margin-right: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   img {
     width: 100%;
     height: auto;
     cursor: pointer;
   }
   h1 {
+    display: inline-block;
+    width: fit-content;
     font-weight: 500;
     text-align: center;
     cursor: pointer;
@@ -102,7 +109,6 @@ export default function Projects() {
 
   const ref = useRef(null);
   const horizontalRef = useRef(null);
-  console.log('horizontalRef', horizontalRef);
 
   useLayoutEffect(() => {
     let element = ref.current;
@@ -151,7 +157,10 @@ export default function Projects() {
       >
         Projects
       </Title>
-      <Left>text</Left>
+      <Left>
+        This is where I will dispaly my projects. Add more info about project
+        creations
+      </Left>
       <Right ref={horizontalRef}>
         <Project img={project1} title="abc" />
         <Project img={project1} title="abc" />
