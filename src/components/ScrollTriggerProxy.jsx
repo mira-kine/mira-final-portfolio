@@ -4,7 +4,7 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const ScrollTriggerProxy = () => {
   // first get instance of locomotive scroll
