@@ -8,6 +8,7 @@ import project2 from '../images/alchemy-year-book.png';
 import project3 from '../images/goodjob-ss.png';
 import project4 from '../images/unspoken.png';
 import project5 from '../images/huu.jpg';
+import { Link, useHistory } from 'react-router-dom';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -92,6 +93,11 @@ const Item = styled(motion.div)`
 `;
 
 const Project = ({ img, title = '' }) => {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push(`/${img}`);
+  };
+
   return (
     <Item
       initial={{
@@ -101,7 +107,9 @@ const Project = ({ img, title = '' }) => {
       transition={{ duration: 0.5 }}
       viewport={{ once: false, amount: 'all' }}
     >
-      <img src={img} alt={title} />
+      <Link to={`/${title}`}>
+        <img src={img} alt={title} />
+      </Link>
       <h1>{title}</h1>
     </Item>
   );
@@ -166,8 +174,8 @@ export default function Projects() {
         creations
       </Left>
       <Right ref={horizontalRef}>
-        <Project img={project1} title="ShopAde" />
-        <Project img={project5} title="Home Unites Us" />
+        <Project img={project1} title="ShopAde" url="shopade" />
+        <Project img={project5} title="HomeUnitesUs" />
         <Project img={project2} title="Yearbook" />
         <Project img={project3} title="Goodjob.dev" />
         <Project img={project4} title="Unspoken" />
