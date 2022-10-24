@@ -2,8 +2,12 @@ import React, { useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import project1 from '../images/shop-ade-title.jpg';
 import { motion } from 'framer-motion';
+import project1 from '../images/shop-ade.jpg';
+import project2 from '../images/alchemy-year-book.png';
+import project3 from '../images/goodjob-ss.png';
+import project4 from '../images/unspoken.png';
+import project5 from '../images/huu.jpg';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -158,16 +162,15 @@ export default function Projects() {
         Projects
       </Title>
       <Left>
-        This is where I will dispaly my projects. Add more info about project
+        This is where I will display my projects. Add more info about project
         creations
       </Left>
       <Right ref={horizontalRef}>
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
+        <Project img={project1} title="ShopAde" />
+        <Project img={project5} title="Home Unites Us" />
+        <Project img={project2} title="Yearbook" />
+        <Project img={project3} title="Goodjob.dev" />
+        <Project img={project4} title="Unspoken" />
       </Right>
     </Section>
   );
