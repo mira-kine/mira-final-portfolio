@@ -177,7 +177,7 @@ export default function Projects() {
         <Project img={project1} title="ShopAde" url="shopade" />
         <Project img={project5} title="HomeUnitesUs" />
         <Project img={project2} title="Yearbook" />
-        <Project img={project3} title="Goodjob.dev" />
+        <Project img={project3} title="GoodJob" />
         <Project img={project4} title="Unspoken" />
       </Right>
     </Section>
