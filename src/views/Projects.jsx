@@ -2,8 +2,13 @@ import React, { useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import project1 from '../images/shop-ade-title.jpg';
 import { motion } from 'framer-motion';
+import project1 from '../images/shop-ade.jpg';
+import project2 from '../images/alchemy-year-book.png';
+import project3 from '../images/goodjob-ss.png';
+import project4 from '../images/unspoken.png';
+import project5 from '../images/huu.jpg';
+import { Link, useHistory } from 'react-router-dom';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -88,6 +93,11 @@ const Item = styled(motion.div)`
 `;
 
 const Project = ({ img, title = '' }) => {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push(`/${img}`);
+  };
+
   return (
     <Item
       initial={{
@@ -97,7 +107,9 @@ const Project = ({ img, title = '' }) => {
       transition={{ duration: 0.5 }}
       viewport={{ once: false, amount: 'all' }}
     >
-      <img src={img} alt={title} />
+      <Link to={`/${title}`}>
+        <img src={img} alt={title} />
+      </Link>
       <h1>{title}</h1>
     </Item>
   );
@@ -158,16 +170,15 @@ export default function Projects() {
         Projects
       </Title>
       <Left>
-        This is where I will dispaly my projects. Add more info about project
+        This is where I will display my projects. Add more info about project
         creations
       </Left>
       <Right ref={horizontalRef}>
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
-        <Project img={project1} title="abc" />
+        <Project img={project1} title="ShopAde" url="shopade" />
+        <Project img={project5} title="HomeUnitesUs" />
+        <Project img={project2} title="Yearbook" />
+        <Project img={project3} title="GoodJob" />
+        <Project img={project4} title="Unspoken" />
       </Right>
     </Section>
   );
