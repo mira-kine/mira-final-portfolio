@@ -93,11 +93,6 @@ const Item = styled(motion.div)`
 `;
 
 const Project = ({ img, title = '' }) => {
-  const history = useHistory();
-  const handleClick = () => {
-    history.push(`/${img}`);
-  };
-
   return (
     <Item
       initial={{
@@ -107,9 +102,7 @@ const Project = ({ img, title = '' }) => {
       transition={{ duration: 0.5 }}
       viewport={{ once: false, amount: 'all' }}
     >
-      <Link to={`/${title}`}>
-        <img src={img} alt={title} />
-      </Link>
+      <img src={img} alt={title} />
       <h1>{title}</h1>
     </Item>
   );
@@ -174,11 +167,21 @@ export default function Projects() {
         creations
       </Left>
       <Right ref={horizontalRef}>
-        <Project img={project1} title="ShopAde" url="shopade" />
-        <Project img={project5} title="HomeUnitesUs" />
-        <Project img={project2} title="Yearbook" />
-        <Project img={project3} title="GoodJob" />
-        <Project img={project4} title="Unspoken" />
+        <a href="https://tcl-45-smart-shopping-list.firebaseapp.com/">
+          <Project img={project1} title="ShopAde" />
+        </a>
+        <a href="alchemyyearbook.netlify.app/">
+          <Project img={project2} title="Yearbook" />
+        </a>
+        <a href="https://goodjob.dev/">
+          <Project img={project3} title="GoodJob" />
+        </a>
+        <a href="https://unspokenstories.netlify.app/">
+          <Project img={project4} title="Unspoken" />
+        </a>
+        <a href="https://github.com/hackforla/HomeUniteUs">
+          <Project img={project5} title="HomeUnitesUs" />
+        </a>
       </Right>
     </Section>
   );
