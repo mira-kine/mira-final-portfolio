@@ -7,8 +7,7 @@ import project1 from '../images/shop-ade.jpg';
 import project2 from '../images/alchemy-year-book.png';
 import project3 from '../images/goodjob-ss.png';
 import project4 from '../images/unspoken.png';
-import project5 from '../images/huu.jpg';
-import { Link, useHistory } from 'react-router-dom';
+// import project5 from '../images/huu.jpg';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -92,7 +91,7 @@ const Item = styled(motion.div)`
   }
 `;
 
-const Project = ({ img, title = '' }) => {
+const Project = ({ img, title = '', description = '' }) => {
   return (
     <Item
       initial={{
@@ -104,6 +103,7 @@ const Project = ({ img, title = '' }) => {
     >
       <img src={img} alt={title} />
       <h1>{title}</h1>
+      <p>{description}</p>
     </Item>
   );
 };
@@ -160,7 +160,7 @@ export default function Projects() {
         data-scroll-speed="-1"
         data-scroll-direction="horizontal"
       >
-        Projects
+        Personal & Group Projects
       </Title>
       <Left>
         This is where I will display my projects. Add more info about project
@@ -168,20 +168,36 @@ export default function Projects() {
       </Left>
       <Right ref={horizontalRef}>
         <a href="https://tcl-45-smart-shopping-list.firebaseapp.com/">
-          <Project img={project1} title="ShopAde" />
+          <Project
+            img={project1}
+            title="ShopAde"
+            description="Shop-ade is a retro arcade Pacman themed smart shopping list app that learns your buying habits and predicts the next time you may buy items."
+          />
         </a>
         <a href="alchemyyearbook.netlify.app/">
-          <Project img={project2} title="Yearbook" />
+          <Project
+            img={project2}
+            title="Yearbook"
+            description="An app that bridges the gap in alumni networking for Alchemy students."
+          />
         </a>
         <a href="https://goodjob.dev/">
-          <Project img={project3} title="GoodJob" />
+          <Project
+            img={project3}
+            title="GoodJob"
+            description="An app that supports software developers in organizing their job application process."
+          />
         </a>
         <a href="https://unspokenstories.netlify.app/">
-          <Project img={project4} title="Unspoken" />
+          <Project
+            img={project4}
+            title="Unspoken"
+            description="A place to write your stories, memories or unspoken words while listening to lofi beats. Sometimes all you need is to write it out."
+          />
         </a>
-        <a href="https://github.com/hackforla/HomeUniteUs">
+        {/* <a href="https://github.com/hackforla/HomeUniteUs">
           <Project img={project5} title="HomeUnitesUs" />
-        </a>
+        </a> */}
       </Right>
     </Section>
   );
