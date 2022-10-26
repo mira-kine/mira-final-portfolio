@@ -6,6 +6,7 @@ const Section = styled.section`
   min-height: 100vh;
   width: 80vw;
   display: flex;
+  overflow: hidden;
 
   margin: 0 auto;
 `;
@@ -28,6 +29,8 @@ const Left = styled.div`
   position: relative;
   z-index: 5;
   margin-top: 20%;
+  margin-bottom: 10%;
+  margin-right: 10%;
 `;
 
 const Right = styled.div`
@@ -49,7 +52,7 @@ const Right = styled.div`
   .small-img-1 {
     width: 40%;
     position: absolute;
-    right: 85%;
+    right: 78%;
     bottom: 12%;
   }
 
@@ -72,7 +75,35 @@ export default function About() {
         About Me
       </Title>
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-        Write text in here about who you are
+        <p>
+          I am a full stack software developer who cares about people and their
+          stories. My background in mental health & biopsychology helps me stay
+          grounded in human connection and user experience while pursuing
+          accessibility, equity and soulfulness in the digital world.{' '}
+        </p>{' '}
+        <br />
+        <p>Languages: JavaScript, HTML, CSS, TypeScript, Python, SQL</p>
+        <br />
+        <p>
+          Libraries + Frameworks: React, Redux, Node.js, Tailwind CSS, jQuery,
+          Express, Flask
+          <br />
+          <p>
+            Testing: TDD, Jest, QUnit, Snapshot, Supertest, Mock Service Worker
+          </p>
+          <br />
+          <p>Databases: PostgreSQL, NoSQL, SQL</p>
+          <br />
+          <p>
+            Dev Practices: Agile Scrum Methodology, Pair & mob programming,
+            RESTful routing
+          </p>
+          <br />
+          <p>
+            Tools: GitHub, VSCode, Heroku, Netlify, Postman, Miro, Photoshop,
+            Procreate, Canva, Beekeeper
+          </p>
+        </p>
       </Left>
       <Right>
         <img
