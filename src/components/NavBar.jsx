@@ -74,11 +74,12 @@ export default function NavBar() {
     setClick(!click);
 
     scroll.scrollTo(element, {
-      offset: '-100',
+      offset: '0',
       duration: '2000',
       easing: [0.25, 0.0, 0.35, 1.0],
     });
   };
+
   return (
     <NavContainer click={click}>
       <MenuItems>
