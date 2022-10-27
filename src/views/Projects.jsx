@@ -162,10 +162,7 @@ export default function Projects() {
       >
         Personal & Group Projects
       </Title>
-      <Left>
-        This is where I will display my projects. Add more info about project
-        creations
-      </Left>
+      <Left>These are some projects I have worked on!</Left>
       <Right ref={horizontalRef}>
         <a href="https://tcl-45-smart-shopping-list.firebaseapp.com/">
           <Project
