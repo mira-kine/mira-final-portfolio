@@ -113,12 +113,12 @@ export default function NavBar() {
         >
           Fun
         </MenuItem> */}
-        <MenuItem
+        {/* <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
         >
           Contact
-        </MenuItem>
+        </MenuItem> */}
       </MenuItems>
     </NavContainer>
   );
