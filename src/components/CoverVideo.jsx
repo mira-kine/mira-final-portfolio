@@ -80,43 +80,7 @@ export default function CoverVideo() {
         <Title variants={container} initial="hidden" animate="show">
           <div aria-label="Mira Kinebuchi name title">
             <h1 data-scroll data-scroll-delay="0.13" data-scroll-speed="4">
-              M
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.06" data-scroll-speed="4">
-              i
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.13" data-scroll-speed="4">
-              r
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.13" data-scroll-speed="4">
-              a
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.06" data-scroll-speed="4">
-              K
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.13" data-scroll-speed="4">
-              i
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.06" data-scroll-speed="4">
-              n
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
-              e
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.06" data-scroll-speed="4">
-              b
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.13" data-scroll-speed="4">
-              u
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.06" data-scroll-speed="4">
-              c
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.04" data-scroll-speed="4">
-              h
-            </h1>
-            <h1 data-scroll data-scroll-delay="0.13" data-scroll-speed="4">
-              i
+              Mira Kinebuchi
             </h1>
           </div>
           <h2
