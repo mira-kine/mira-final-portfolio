@@ -74,7 +74,7 @@ export default function About() {
       >
         About Me
       </Title>
-      <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
+      <Left data-scroll data-scroll-sticky>
         <p>
           I am a full stack software developer who cares about people and their
           stories. My background in mental health & biopsychology helps me stay
