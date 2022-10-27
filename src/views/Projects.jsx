@@ -57,7 +57,6 @@ const Right = styled.div`
   min-height: 100vh;
 
   background-color: ${(props) => props.theme.grey};
-  //   width: 65%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
