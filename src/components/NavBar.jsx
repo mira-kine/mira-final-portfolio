@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 // to hide height, use negative (-) when menu is not clicked, otherwise set to very top of screen
 const NavContainer = styled.div`
@@ -65,6 +66,19 @@ const MenuItem = styled(motion.li)`
 
 export default function NavBar() {
   const [click, setClick] = useState(false);
+
+  const { scroll } = useLocomotiveScroll();
+
+  const handleScroll = (id) => {
+    let element = document.querySelector(id);
+    setClick(!click);
+
+    scroll.scrollTo(element, {
+      offset: '-100',
+      duration: '2000',
+      easing: [0.25, 0.0, 0.35, 1.0],
+    });
+  };
   return (
     <NavContainer click={click}>
       <MenuItems>
@@ -74,27 +88,30 @@ export default function NavBar() {
         <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
+          onClick={() => handleScroll('#home')}
         >
           Home
         </MenuItem>
         <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
+          onClick={() => handleScroll('.about')}
         >
           About
         </MenuItem>
         <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
+          onClick={() => handleScroll('#projects')}
         >
           Projects
         </MenuItem>
-        <MenuItem
+        {/* <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
         >
           Fun
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
