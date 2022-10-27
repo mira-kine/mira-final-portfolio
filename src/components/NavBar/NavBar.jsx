@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 // to hide height, use negative (-) when menu is not clicked, otherwise set to very top of screen
 const NavContainer = styled.div`
@@ -61,10 +62,23 @@ const MenuButton = styled.li`
 const MenuItem = styled(motion.li)`
   text-transform: uppercase;
   color: ${(props) => props.theme.text};
+  min-margin: 10%;
 `;
 
 export default function NavBar() {
   const [click, setClick] = useState(false);
+  const { scroll } = useLocomotiveScroll();
+
+  const handleScroll = (id) => {
+    let element = document.querySelector(id);
+    setClick(!click);
+
+    scroll.scrollTo(element, {
+      offset: '-100',
+      duration: '2000',
+      easing: [0.25, 0.0, 0.35, 1.0],
+    });
+  };
   return (
     <NavContainer click={click}>
       <MenuItems>
@@ -72,33 +86,42 @@ export default function NavBar() {
           Menu
         </MenuButton>
         <MenuItem
+          onClick={() => handleScroll('#home')}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
         >
+          {' '}
           Home
         </MenuItem>
         <MenuItem
+          onClick={() => handleScroll('.about')}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
         >
           About
         </MenuItem>
         <MenuItem
+          onClick={() => handleScroll('#projects')}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
         >
+          {' '}
           Projects
         </MenuItem>
         <MenuItem
+          onClick={() => handleScroll('#fun')}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
         >
+          {' '}
           Fun
         </MenuItem>
         <MenuItem
+          onClick={() => handleScroll('#contact')}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
         >
+          {' '}
           Contact
         </MenuItem>
       </MenuItems>

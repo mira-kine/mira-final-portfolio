@@ -66,7 +66,7 @@ const Right = styled.div`
 
 export default function About() {
   return (
-    <Section id="fixed-target">
+    <Section id="fixed-target" className="about">
       <Title
         data-scroll
         data-scroll-speed="-2"
@@ -87,22 +87,22 @@ export default function About() {
         <p>
           Libraries + Frameworks: React, Redux, Node.js, Tailwind CSS, jQuery,
           Express, Flask
-          <br />
-          <p>
-            Testing: TDD, Jest, QUnit, Snapshot, Supertest, Mock Service Worker
-          </p>
-          <br />
-          <p>Databases: PostgreSQL, NoSQL, SQL</p>
-          <br />
-          <p>
-            Dev Practices: Agile Scrum Methodology, Pair & mob programming,
-            RESTful routing
-          </p>
-          <br />
-          <p>
-            Tools: GitHub, VSCode, Heroku, Netlify, Postman, Miro, Photoshop,
-            Procreate, Canva, Beekeeper
-          </p>
+        </p>
+        <br />
+        <p>
+          Testing: TDD, Jest, QUnit, Snapshot, Supertest, Mock Service Worker
+        </p>
+        <br />
+        <p>Databases: PostgreSQL, NoSQL, SQL</p>
+        <br />
+        <p>
+          Dev Practices: Agile Scrum Methodology, Pair & mob programming,
+          RESTful routing
+        </p>
+        <br />
+        <p>
+          Tools: GitHub, VSCode, Heroku, Netlify, Postman, Miro, Photoshop,
+          Procreate, Canva, Beekeeper
         </p>
       </Left>
       <Right>

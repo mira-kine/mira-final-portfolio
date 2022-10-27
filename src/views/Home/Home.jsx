@@ -12,7 +12,7 @@ const Section = styled.section`
 
 export default function Home() {
   return (
-    <Section className="home-section">
+    <Section id="home">
       <CoverVideo />
       <Logo />
       <NavBar />

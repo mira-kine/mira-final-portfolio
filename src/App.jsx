@@ -16,7 +16,6 @@ function App() {
     <>
       <GlobalStyles />
       <ThemeProvider theme={dark}>
-        {/* <Switch> */}
         <LocomotiveScrollProvider
           options={{
             smooth: true,
@@ -40,9 +39,7 @@ function App() {
               <Projects />
             </main>
           </AnimatePresence>
-          {/* </Route> */}
         </LocomotiveScrollProvider>
-        {/* </Switch> */}
       </ThemeProvider>
     </>
   );

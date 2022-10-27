@@ -154,7 +154,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <Section data-scroll-container ref={ref}>
+    <Section data-scroll-container ref={ref} id="projects">
       <Title
         data-scroll
         data-scroll-speed="-1"
